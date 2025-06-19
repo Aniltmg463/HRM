@@ -19,7 +19,7 @@
     </main>
 
     <footer class="bg-amber-50">
-        <h1>this is footer section</h1>
+        <h1 class="text-3xl text-amber-400">this is footer section</h1>
     </footer>
 </body>
 
