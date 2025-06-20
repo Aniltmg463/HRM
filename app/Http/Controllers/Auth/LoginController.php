@@ -66,6 +66,7 @@ class LoginController extends Controller
         ]);
 
         $token = Str::random(64);
+        // dd("sdas");
 
         DB::table('password_reset_tokens')->where('email', $request->email)->delete();
 
@@ -89,6 +90,8 @@ class LoginController extends Controller
     // Submit reset password
     public function SubmitResetPasswordForm(Request $request)
     {
+        // dd($request);
+        // dd($request->all());
         $request->validate([
             'email' => 'required|email|exists:users,email',
             'password' => 'required|string|min:6|confirmed',
